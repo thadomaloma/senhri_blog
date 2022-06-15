@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_15_144713) do
+ActiveRecord::Schema.define(version: 2022_06_15_152505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 2022_06_15_144713) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.integer "post_id"
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer "requestor_id"
+    t.integer "requestee_id"
+    t.boolean "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["requestee_id"], name: "index_friendships_on_requestee_id"
+    t.index ["requestor_id", "requestee_id"], name: "index_friendships_on_requestor_id_and_requestee_id", unique: true
+    t.index ["requestor_id"], name: "index_friendships_on_requestor_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -52,6 +63,8 @@ ActiveRecord::Schema.define(version: 2022_06_15_144713) do
     t.string "gender"
     t.string "profile_pic"
     t.boolean "admin", default: false
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
