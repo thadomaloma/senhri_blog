@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 
+gem 'omniauth-facebook', '~> 9.0'
 gem 'rails', '~> 6.0.3'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
@@ -12,6 +13,15 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
+gem 'devise'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'faker', '~> 2.21'
+gem 'jquery-rails', '~> 4.5'
+gem 'mini_magick', '~> 4.11'
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
+
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
