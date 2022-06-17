@@ -24,7 +24,7 @@
               <% if current_user == comment.user %>
                     <div class="col-md-1">
                         <%= button_to "delete", comment, params: {'comment[id]' => comment.id}, method: :delete,
-                                                    data: { confirm: "You sure?" }, class: "btn-danger" %>
+                                                    data: { confirm: "Are you sure?" }, class: "btn-danger" %>
                     </div>
                     <div class="col-md-1">
                         <%= button_to "edit", edit_comment_path(comment) , method: :get, class: "btn-primary" %>

@@ -2,6 +2,6 @@ class HomeController < ApplicationController
   def index
     @like = Like.new
     @comment = Comment.new
-    @posts = Post.paginate(page: params[:page])
+    @posts = current_user.feed.paginate(page: params[:page]) if user_signed_in?
   end
 end
