@@ -13,7 +13,6 @@
 ## Technology outside the curriculum
 
 * bootstrap-sass
-* bootstrap-will_paginate
 * will_paginate
 
 ## Execution Procedure
@@ -32,6 +31,6 @@ $ rails s
 
 ## Wireframe
 
-# ER Diagram
+## ER Diagram
 
 ## Screen Transition Diagram
