@@ -1,24 +1,37 @@
-# README
+# README						
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development Language
 
-Things you may want to cover:
+* Ruby 3.0.1
+* Rails 6.0.3
 
-* Ruby version
+## Employment Term Technology
 
-* System dependencies
+* devise
+* Heroku
 
-* Configuration
+## Technology outside the curriculum
 
-* Database creation
+* bootstrap-sass
+* bootstrap-will_paginate
+* will_paginate
 
-* Database initialization
+## Execution Procedure
 
-* How to run the test suite
+```
+$ git clone git@github.com:thadomaloma/senhri_blog.git
+$ cd senhri_blog
+$ bundle install
+$ rails db:create && rails db:migrate
+$ rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Catalog Design
 
-* Deployment instructions
+## Table Definition Document
 
-* ...
+## Wireframe
+
+# ER Diagram
+
+## Screen Transition Diagram
