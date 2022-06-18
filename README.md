@@ -8,12 +8,12 @@
 ## Employment Term Technology
 
 * devise
-* Heroku
+* AWS
 
 ## Technology outside the curriculum
 
+* omniauth-facebook
 * bootstrap-sass
-* will_paginate
 
 ## Execution Procedure
 
