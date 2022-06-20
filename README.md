@@ -27,7 +27,11 @@ $ rails s
 
 ## Catalog Design
 
+https://docs.google.com/spreadsheets/d/1qZWB1U37O4doDgel2AG0BjRMk-0WFHznzwqfhcxQ4Bg/edit#gid=1804989209
+
 ## Table Definition Document
+
+https://docs.google.com/spreadsheets/d/1qZWB1U37O4doDgel2AG0BjRMk-0WFHznzwqfhcxQ4Bg/edit#gid=1090603487
 
 ## Wireframe
 
