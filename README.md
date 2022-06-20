@@ -37,4 +37,6 @@ https://docs.google.com/spreadsheets/d/1qZWB1U37O4doDgel2AG0BjRMk-0WFHznzwqfhcxQ
 
 ## ER Diagram
 
+https://drive.google.com/file/d/1VTRgk1LlRDRsfoWAF4ucaiI_OCsIUKDd/view?usp=sharing
+
 ## Screen Transition Diagram
