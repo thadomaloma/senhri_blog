@@ -23,9 +23,11 @@ gem 'mini_magick', '~> 4.11'
 gem 'will_paginate', '~> 3.3', '>= 3.3.1'
 
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'rexml'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
 end
 
 group :development do
