@@ -42,3 +42,5 @@ https://drive.google.com/file/d/1bB3IIxArD4DeOYELfAY-AevVNLeCWFXb/view?usp=shari
 https://drive.google.com/file/d/1VTRgk1LlRDRsfoWAF4ucaiI_OCsIUKDd/view?usp=sharing
 
 ## Screen Transition Diagram
+
+https://drive.google.com/file/d/1bSTrxsVyaFZZ2L95g3SQM-6f7IkVbysO/view?usp=sharing
