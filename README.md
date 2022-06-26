@@ -39,8 +39,8 @@ https://cacoo.com/diagrams/ZDED31DeytbIe3Wh/ABA65
 
 ## ER Diagram
 
-https://drive.google.com/file/d/1VTRgk1LlRDRsfoWAF4ucaiI_OCsIUKDd/view?usp=sharing
+![ERDiagram](./docs/erd.png)
 
 ## Screen Transition Diagram
 
-https://drive.google.com/file/d/1bSTrxsVyaFZZ2L95g3SQM-6f7IkVbysO/view?usp=sharing
+![STDiagram](./docs/st.png)
