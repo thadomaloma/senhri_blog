@@ -43,4 +43,4 @@ https://cacoo.com/diagrams/ZDED31DeytbIe3Wh/ABA65
 
 ## Screen Transition Diagram
 
-![STDiagram](./docs/st.png)
+![STDiagram](./docs/stsenhri.png)
