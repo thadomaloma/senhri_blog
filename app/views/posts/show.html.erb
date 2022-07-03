@@ -1,6 +1,6 @@
 <ul>
   <p><%= link_to @post.title, @post %></p>
-  <p><%= @post.body %></p>
+  <p><%= markdown(@post.body) %></p>
   <p> posted <%= time_ago_in_words(@post.created_at) %> ago</p>
   <p> By: &nbsp<%= @post.user.first_name + " " + @post.user.last_name %></p>
   <div class="row">

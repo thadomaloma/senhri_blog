@@ -25,6 +25,8 @@ gem 'will_paginate', '~> 3.3', '>= 3.3.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rexml'
 gem 'rails_admin', '~> 3.0'
+gem 'redcarpet'
+gem 'rouge'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
