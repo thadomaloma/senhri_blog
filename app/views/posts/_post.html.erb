@@ -1,5 +1,5 @@
 <ul>
-  <p><%= link_to post.title, post %></p>
+  <p><%= link_to markdown(post.title), post %></p>
   <p><%= markdown(post.body) %></p>
   <p> posted <%= time_ago_in_words(post.created_at) %> ago</p>
   <p> By: &nbsp<%= post.user.first_name + " " + post.user.last_name %></p>
