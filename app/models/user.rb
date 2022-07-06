@@ -17,12 +17,7 @@ class User < ApplicationRecord
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user_name = auth.info.name.split
-      user.first_name = user_name.first
-      user.last_name = user_name.last
       user.email = auth.info.email
-      user.gender = 'Male'
-      user.birthdate = 30.years.ago
       user.password = Devise.friendly_token[0, 20]
       user.profile_pic = auth.info.image
     end
@@ -82,5 +77,11 @@ class User < ApplicationRecord
 
   def friend?(user)
     friends.include?(user)
+  end
+
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end 
   end
 end
