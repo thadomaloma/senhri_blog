@@ -12,20 +12,8 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :gender, presence: true, unless: -> { from_facebook? }
-  validates :birthdate, presence: true, unless: -> { from_facebook? }
-
-  def self.new_with_session(params, session)
-    super.tap do |user|
-      if (data = session['devise.facebook_data'] && session['devise.facebook_data']['extra']['raw_info'])
-        user.email = data['email'] if user.email.blank?
-      end
-    end
-  end
-
-  def from_facebook?
-    provider && uid
-  end
+  validates :gender, presence: true
+  validates :birthdate, presence: true
 
   def feed
     Post.where('user_id IN (?) OR user_id = ?', friends, id)
@@ -75,6 +63,12 @@ class User < ApplicationRecord
     find_or_create_by!(email: 'guest@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
       user.name = "Guest"
+    end
+  end
+
+  def self.admin_guest
+    find_or_create_by!(name: 'Admin guest', email: 'admin_guest@example.com', admin: true) do |user|
+      user.password = SecureRandom.alphanumeric()
     end
   end
 end

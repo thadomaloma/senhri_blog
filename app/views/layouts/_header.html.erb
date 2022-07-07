@@ -12,7 +12,9 @@
           <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to "Log in/Sign up", new_user_session_path %></li>
+          <li><%= link_to "Log in", new_user_session_path %></li>
+          <li><%= link_to 'Guest Login', users_guest_sign_in_path, method: :post %></li>
+          <li><%= link_to 'Guest Admin Login', users_guest_admin_sign_in_path, method: :post %></li>
         <% end %>
       </ul>
     </nav>
