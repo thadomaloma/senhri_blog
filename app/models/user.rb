@@ -10,8 +10,9 @@ class User < ApplicationRecord
   has_many :initiated_friendships, class_name: 'Friendship', foreign_key: 'requestor_id'
   has_many :invited_friendships, class_name: 'Friendship', foreign_key: 'requestee_id'
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  validates :first_name, presence: true, length: { maximum: 20 }
+  validates :last_name, presence: true, length: { maximum: 20 }
+  validates :email, presence: true, length: { maximum: 50 }
   validates :gender, presence: true
   validates :birthdate, presence: true
 
