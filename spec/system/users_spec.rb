@@ -5,20 +5,20 @@ RSpec.describe "User management function", type: :system do
     context 'When a new user is registered' do
       before do
         visit new_user_registration_path
-        fill_in "first_name", with: 'thado'
-        fill_in "last_name",	with: 'maloma'
-        choose "gender", with: 'male'
-        fill_in "birthdate",	with: '2022-07-06 00:00:00'
-        fill_in "email",	with: 'maloma@example.com'
-        fill_in "password",	with: '123456'
-        fill_in "password_confirmation", with: '123456'
+        fill_in "user[first_name]", with: 'thado'
+        fill_in "user[last_name]",	with: 'maloma'
+        fill_in "user[email]",	with: 'maloma@example.com'
+        fill_in "user[password]",	with: '123456'
+        fill_in "user[password_confirmation]", with: '123456'
+        choose "user[gender]", with: 'male'
+        fill_in "user[birthdate]",	with: '2022-07-06 00:00:00'
         click_button 'Sign up'
       end
       it 'Registration completion is displayed' do
-        expect(page).to have_content 'Account registration is complete.'
+        expect(page).to have_content 'You have signed up successfully.'
       end
       it 'Post button is displayed' do
-        expect(page).to have_content 'Post an article'
+        expect(page).to have_content 'Create Post'
       end
     end
   end
@@ -33,7 +33,7 @@ RSpec.describe "User management function", type: :system do
     end
     context 'When the user logs in' do
       it 'Login is displayed' do
-        expect(page).to have_content 'You are now logged.'
+        expect(page).to have_content 'Signed in successfully.'
       end
     end
   end
