@@ -1,0 +1,29 @@
+require 'rails_helper'
+
+RSpec.describe "Posts", type: :system do
+  before do
+    @user = FactoryBot.create(:user1)
+    @user2 = FactoryBot.create(:user2)
+    @post = FactoryBot.create(:post, user_id: @user.id)
+    @post2 = FactoryBot.create(:post2, user_id: @user2.id)
+  end
+
+  describe 'New creation function' do
+    before do
+      visit new_user_session_path
+      fill_in 'email', with: 'maloma@example.com'
+      fill_in 'password', with: '123456'
+      click_button 'Log in'
+      visit new_post_path
+      fill_in "title", with: "test_title"
+      fill_in "body", with: "test_body"
+      click_button 'Create Post'
+    end
+
+    context 'When creating a new article' do
+      it 'The created article is displayed' do
+        expect(page).to have_content 'test_title'
+      end
+    end
+  end
+end

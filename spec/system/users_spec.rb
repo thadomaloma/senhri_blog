@@ -23,4 +23,19 @@ RSpec.describe "User management function", type: :system do
     end
   end
 
+  describe 'Session function' do
+    before do
+      @user = User.create(first_name: "test_first", last_name: "test_last", email: "test@gmail.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456")
+      visit new_user_session_path
+      fill_in 'user_email', with: 'test@gmail.com'
+      fill_in 'user_password', with: '123456'
+      click_button 'Log in'
+    end
+    context 'When the user logs in' do
+      it 'Login is displayed' do
+        expect(page).to have_content 'You are now logged.'
+      end
+    end
+  end
+
 end
