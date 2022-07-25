@@ -21,9 +21,8 @@ gem 'faker', '~> 2.21'
 gem 'jquery-rails', '~> 4.5'
 gem 'mini_magick', '~> 4.11'
 gem 'will_paginate', '~> 3.3', '>= 3.3.1'
-
+gem 'faker', '~> 2.21'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'rexml'
 gem 'rails_admin', '~> 3.0'
 gem 'cancancan', '~> 1.15'
 gem 'redcarpet'
@@ -32,7 +31,9 @@ gem 'rouge'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
+  gem 'spring-commands-rspec'
   gem 'factory_bot_rails'
+  gem 'rexml'
 end
 
 group :development do
@@ -44,7 +45,6 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  # gem 'selenium-webdriver'
   gem 'webdrivers'
 end
 

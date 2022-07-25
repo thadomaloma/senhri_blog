@@ -26,4 +26,19 @@ RSpec.describe "Posts", type: :system do
       end
     end
   end
+  describe 'List display function' do
+    before do
+      visit new_user_session_path
+      fill_in 'user_email', with: 'maloma@example.com'
+      fill_in 'user_password', with: '123456'
+      click_button 'Log in'
+      visit post_path
+    end
+    context 'When transitioning to the list screen' do
+      it 'A list of created posts is displayed' do
+        expect(page).to have_content 'test_title'
+        expect(page).to have_content @user.body
+      end
+    end
+  end
 end
