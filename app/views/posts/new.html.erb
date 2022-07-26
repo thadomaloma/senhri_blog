@@ -5,9 +5,9 @@
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :title %>
-      <%= f.text_field :title, class: 'form-control' %>
+      <%= f.text_field :title, placeholder: "Title", autofocus: true, class: 'form-control' %>
       <%= f.label :body %>
-      <%= f.text_area :body, class: 'form-control', :cols => "15", :rows => "7" %>
+      <%= f.text_area :body, placeholder: "Content", class: 'form-control', :cols => "15", :rows => "7" %>
       <%= f.submit "Create Post", class: "btn btn-primary" %>
     <% end %>
   </div>
