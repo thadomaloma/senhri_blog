@@ -11,12 +11,12 @@ RSpec.describe "Posts", type: :system do
   describe 'New creation function' do
     before do
       visit new_user_session_path
-      fill_in 'email', with: 'maloma@example.com'
-      fill_in 'password', with: '123456'
+      fill_in 'user_email', with: 'maloma@example.com'
+      fill_in 'user_password', with: '123456'
       click_button 'Log in'
       visit new_post_path
-      fill_in "title", with: "test_title"
-      fill_in "body", with: "test_body"
+      fill_in "post_title", with: "test_title"
+      fill_in "post_body", with: "test_body"
       click_button 'Create Post'
     end
 
@@ -32,12 +32,47 @@ RSpec.describe "Posts", type: :system do
       fill_in 'user_email', with: 'maloma@example.com'
       fill_in 'user_password', with: '123456'
       click_button 'Log in'
-      visit post_path
+      visit posts_path
     end
     context 'When transitioning to the list screen' do
       it 'A list of created posts is displayed' do
         expect(page).to have_content 'test_title'
-        expect(page).to have_content @user.body
+      end
+    end
+    context 'When transitioning to the detail screen of an arbitrary article' do
+      it 'The content of the corresponding task is displayed' do
+        visit post_path(@post)
+        expect(page).to have_content 'test_body'
+      end
+    end
+  end
+
+  describe 'Article editing function' do
+    before do
+      visit new_user_session_path
+      fill_in 'user_email', with: 'maloma@example.com'
+      fill_in 'user_password', with: '123456'
+      click_button 'Log in'
+      visit posts_path
+    end
+    context 'When editing an article' do
+      it 'The content of the edit is displayed' do
+        expect(page).to have_content 'test_body'
+      end
+    end
+  end
+
+  describe 'Article deletion function' do
+    before do
+      visit new_user_session_path
+      fill_in 'user_email', with: 'maloma@example.com'
+      fill_in 'user_password', with: '123456'
+      click_button 'Log in'
+    end
+    context 'If you delete an article' do
+      it 'Delete is displayed' do
+        click_button 'delete'
+        expect(page).to have_content 'Post has been deleted'
       end
     end
   end
