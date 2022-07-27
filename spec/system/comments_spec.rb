@@ -17,18 +17,18 @@ RSpec.describe "Comments", type: :system do
     end
     context 'If you post a comment' do
       it 'The posted comment is displayed' do
-        visit comment_path(@post)
+        visit post_path(@post)
         fill_in "comment_body", with: "Test_comment"
         click_button 'Comment'
-        expect(page).to have_content 'Comment created!'
+        expect(page).to have_content 'Test_comment'
       end
     end
     context 'If you delete the comment' do
       it 'Comments are deleted and disappear' do
-        visit edit_comment_path(@post)
+        visit post_path(@post)
         click_button 'delete'
+        expect(page).not_to have_content 'Test_comment'
         end
-        expect(page).to have_content 'Comment has been deleted'
       end
     end
   end
