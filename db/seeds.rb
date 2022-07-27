@@ -4,11 +4,11 @@ User.create!(first_name: "test_first3", last_name: "test_last3", email: "test3@g
 User.create!(first_name: "test_first4", last_name: "test_last4", email: "test4@gmail.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456")
 User.create!(first_name: "test_first5", last_name: "test_last5", email: "test5@gmail.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456")
 
-Post.create!(title: "test1", body: "content1", impressions_count: 0, user_id: 1)
-Post.create!(title: "test2", body: "content2", impressions_count: 0, user_id: 2)
-Post.create!(title: "test3", body: "content3", impressions_count: 0, user_id: 3)
-Post.create!(title: "test4", body: "content4", impressions_count: 0, user_id: 4)
-Post.create!(title: "test5", body: "content5", impressions_count: 0, user_id: 5)
+Post.create!(title: "test1", body: "content1", user_id: 1)
+Post.create!(title: "test2", body: "content2", user_id: 2)
+Post.create!(title: "test3", body: "content3", user_id: 3)
+Post.create!(title: "test4", body: "content4", user_id: 4)
+Post.create!(title: "test5", body: "content5", user_id: 5)
 
 Comment.create!(post_id: 1, body: "Commented")
 Comment.create!(post_id: 2, body: "Commented")
