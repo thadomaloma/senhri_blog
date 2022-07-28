@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2022_06_15_152505) do
     t.string "last_name"
     t.datetime "birthdate"
     t.string "gender"
+    t.string "profile_pic"
     t.boolean "admin", default: false
     t.string "provider"
     t.string "uid"
