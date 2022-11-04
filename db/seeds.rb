@@ -1,5 +1,5 @@
-@user1 = User.create!(first_name: "test_first1", last_name: "test_last1", email: "test1@gmail.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456")
-@user2 = User.create!(first_name: "test_first2", last_name: "test_last2", email: "test2@gmail.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456")
+@user1 = User.create!(first_name: "Admin", last_name: "Guest", email: "admin_guest@example.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456", admin: true)
+@user2 = User.create!(first_name: "Guest", last_name: "User", email: "guest@example.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456")
 @user3 = User.create!(first_name: "test_first3", last_name: "test_last3", email: "test3@gmail.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456")
 @user4 = User.create!(first_name: "test_first4", last_name: "test_last4", email: "test4@gmail.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456")
 @user5 = User.create!(first_name: "test_first5", last_name: "test_last5", email: "test5@gmail.com", birthdate: "2022-07-06 00:00:00", gender: "male", password: "123456", password_confirmation: "123456")
